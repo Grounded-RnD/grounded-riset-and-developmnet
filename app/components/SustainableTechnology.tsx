@@ -8,7 +8,7 @@ export default function SustainableTechnology() {
   return (
     <React.Fragment>
       <section id="about" className="xl:h-screen">
-        <div className="bg-dark text-white px-48 py-32 flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 ">
+        <div className="bg-dark-50 text-white px-48 py-32 flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 ">
           <div className="w-full md:w-1/2">
             <Image
               src={SustainProduct} 
