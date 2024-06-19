@@ -1,4 +1,3 @@
-import InitialAOS from "@/services/InitialAOS";
 import Header from "./components/Header";
 import SustainableTechnology from "./components/SustainableTechnology";
 import SolutionForEveryone from "./components/SolutionForEveryone";
@@ -12,7 +11,7 @@ import Interest from "./components/Interest";
 
 export default function Home() {
   return (
-    <InitialAOS>
+    <>
       <Header />
       <SustainableTechnology />
       <SolutionForEveryone />
@@ -23,6 +22,6 @@ export default function Home() {
       <TechStack />
       <FeaturedOn />
       <Interest />
-    </InitialAOS>
+    </>
   );
 }
