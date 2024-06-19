@@ -19,11 +19,9 @@ export const LinkButton = ({ children, className, loading, variant, href, target
       <Link
         href={href}
         target={target}
-        className={
-          "font-semibold text-[16px] text-warning-200 border-2 rounded-lg border-warning-400 px-4 py-2 hover:ring-2 hover:ring-warning-200 hover:bg-gradient-to-r hover:from-warning-400 hover:to-warning-300 transition-all duration-200 hover:text-surface-50 focus:bg-warning-400 focus:text-surface-50 focus:ring-warning-100 focus:ring-2" +
-          className +
-          "flex items-center w-auto"
-        }
+        className={`font-semibold text-[16px] text-warning-200 border-2 rounded-lg border-warning-400 px-4 py-1 hover:ring-2 hover:ring-warning-200 hover:bg-gradient-to-r hover:from-warning-400 hover:to-warning-300 transition-all duration-200 hover:text-surface-50 focus:bg-warning-400 focus:text-surface-50 focus:ring-warning-100 focus:ring-2
+          ${className} 
+          flex items-center w-auto`}
       >
         {loading && (
           <>
