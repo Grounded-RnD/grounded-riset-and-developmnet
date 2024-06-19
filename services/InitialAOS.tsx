@@ -12,6 +12,7 @@ export default function InitialAOS({ children }: AOSProops) {
     AOS.init({
       duration: 1000,
       once: true,
+      easing: "ease-out",
     });
   });
   return <React.Fragment>{children}</React.Fragment>;

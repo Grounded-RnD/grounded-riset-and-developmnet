@@ -5,7 +5,6 @@ import GLogo from "@/public/logo/main-logo.svg";
 import Link from "next/link";
 import { LinkButton } from "../utilities/Button";
 import XIcon from "../utilities/XIcon";
-import { usePathname } from "next/navigation";
 
 interface NavbarProps {
   title: string;
@@ -74,7 +73,12 @@ export default function Navbar() {
 
   return (
     <React.Fragment>
-      <nav className="xl:bg-dark-50 bg-transparent fixed w-full xl:max-w-[1632px] lg:max-w-[1000px] md:max-w-[720px] sm:max-w-[620px] max-w-[480px] mx-auto z-20 top-8 left-0 right-0 rounded-[16px] shadow-sm">
+      <nav
+        data-aos="fade-down"
+        data-aos-delay="3000"
+        data-aos-duration="1000"
+        className="bg-dark-50  fixed w-full xl:max-w-[1632px] lg:max-w-[1000px] md:max-w-[720px] sm:max-w-[620px] max-w-[480px] mx-auto z-20 top-8 left-0 right-0 rounded-[16px] shadow-sm"
+      >
         <div className="max-w-full flex flex-wrap items-center justify-between p-2 mx-4">
           <button onClick={() => window.location.reload()} className="flex items-center space-x-3 rtl:space-x-reverse">
             <Image src={GLogo} className="h-8" alt="Grounded Logo" />
@@ -98,12 +102,12 @@ export default function Navbar() {
             </button>
           </div>
           <div className="items-center justify-between hidden w-full xl:flex xl:w-auto xl:order-1" id="navbar-sticky">
-            <ul className="flex flex-col p-4 md:p-0 mt-4 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 ">
+            <ul className="flex flex-col p-4 md:p-0 mt-4 text-warning-200 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 ">
               {links.map((link, i) => (
                 <li key={i}>
                   <Link
                     href={link.href}
-                    className={`inline-block py-2 px-3  text-warning-200 hover:text-surface-50 relative text-transition duration-300 after:absolute after:bottom-1 after:left-1/2 after:h-[2px] after:origin-center after:-translate-x-1/2 after:bg-surface-50 after:transition-all after:duration-300 hover:after:w-4/5 ${
+                    className={`inline-block py-2 px-3 hover:text-surface-50 relative text-transition duration-300 after:absolute after:bottom-1 after:left-1/2 after:h-[2px] after:origin-center after:-translate-x-1/2 after:bg-surface-50 after:transition-all after:duration-300 hover:after:w-4/5 active:text-surface-50 ${
                       activeSection === link.slug ? "after:w-4/5 text-surface-50 font-medium" : "after:w-0"
                     }`}
                   >
