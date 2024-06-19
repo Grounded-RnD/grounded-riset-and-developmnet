@@ -20,7 +20,7 @@ export default function SustainableTechnology() {
             </h2>
             <p className="mt-4 xl:text-[16px] lg:text-[15px] md:text-[16px] sm:text-[15px] text-[14px] font-normal" data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1000">
               Grounded was formed to create innovative products that support sustainable goals.
-            </p>{" "}
+            </p>
             <br />
             <p className="mt-2 xl:text-[16px] lg:text-[15px] md:text-[16px] sm:text-[15px] text-[14px] font-normal" data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1000">
               We are committed to providing technology solutions that increase efficiency, productivity, and preserve the environment. With a focus on agriculture, education, and other sectors, we strive to contribute to a greener and more
