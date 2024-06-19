@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import InitialAOS from "@/services/InitialAOS";
 
 const open_Sans = Open_Sans({ subsets: ["latin"] });
 
@@ -40,9 +41,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Navbar />
-      <body className={`${open_Sans.className} ${Glancyr.variable}`}>{children}</body>
-      <Footer />
+      <InitialAOS>
+        <Navbar />
+        <body className={`${open_Sans.className} ${Glancyr.variable}`}>{children}</body>
+        <Footer />
+      </InitialAOS>
     </html>
   );
 }
