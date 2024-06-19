@@ -62,13 +62,14 @@ export default function Navbar() {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <React.Fragment>
-      <nav className="bg-dark-50 fixed w-full xl:max-w-[1632px] lg:max-w-[1000px] md:max-w-[720px] sm:max-w-[620px] max-w-[480px] mx-auto z-20 top-8 left-0 right-0 rounded-[16px] shadow-sm">
+      <nav className="xl:bg-dark-50 bg-transparent fixed w-full xl:max-w-[1632px] lg:max-w-[1000px] md:max-w-[720px] sm:max-w-[620px] max-w-[480px] mx-auto z-20 top-8 left-0 right-0 rounded-[16px] shadow-sm">
         <div className="max-w-full flex flex-wrap items-center justify-between p-2 mx-4">
-          <Link href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <button onClick={() => window.location.reload()} className="flex items-center space-x-3 rtl:space-x-reverse">
             <Image src={GLogo} className="h-8" alt="Grounded Logo" />
-          </Link>
+          </button>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <LinkButton href="#" variant="primary" className="hidden xl:block">
               Contact Us
