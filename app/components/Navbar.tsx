@@ -5,43 +5,52 @@ import GLogo from "@/public/logo/main-logo.svg";
 import Link from "next/link";
 import { LinkButton } from "../utilities/Button";
 import XIcon from "../utilities/XIcon";
+import { usePathname } from "next/navigation";
 
 interface NavbarProps {
   title: string;
   href: string;
+  slug: string;
 }
 
 export default function Navbar() {
-  const [activeSection, setActiveSection] = useState("Home");
+  const [activeSection, setActiveSection] = useState("home");
   const [sideActive, setSideActive] = useState(false);
   const links: NavbarProps[] = [
     {
       title: "Home",
-      href: "#",
+      href: "/#home",
+      slug: "home",
     },
     {
       title: "About",
-      href: "#about",
+      href: "/#about",
+      slug: "about",
     },
     {
       title: "Products",
-      href: "#products",
+      href: "/#products",
+      slug: "products",
     },
     {
-      title: "Our Services",
-      href: "#services",
+      title: "Projects",
+      href: "/#projects",
+      slug: "projects",
     },
     {
       title: "Investor Relations",
-      href: "#investor-relations",
+      href: "/#investor-relations",
+      slug: "investor-relations",
     },
     {
       title: "Partner",
-      href: "#partner",
+      href: "/#partner",
+      slug: "partner",
     },
     {
       title: "Join Team",
       href: "#join-team",
+      slug: "join-team",
     },
   ];
   const handleScroll = () => {
@@ -71,7 +80,7 @@ export default function Navbar() {
             <Image src={GLogo} className="h-8" alt="Grounded Logo" />
           </button>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <LinkButton href="#" variant="primary" className="hidden xl:block">
+            <LinkButton href="/contact/#contact" variant="primary" className="hidden xl:block">
               Contact Us
             </LinkButton>
             <button
@@ -94,8 +103,8 @@ export default function Navbar() {
                 <li key={i}>
                   <Link
                     href={link.href}
-                    className={`inline-block py-2 px-3 font-normal hover:font-medium text-warning-200 hover:text-surface-50 relative text-transition duration-300 after:absolute after:bottom-1 after:left-1/2 after:h-[2px] after:origin-center after:-translate-x-1/2 after:bg-surface-50 after:transition-all after:duration-300 hover:after:w-4/5 ${
-                      activeSection === link.title.toLowerCase() ? "after:w-4/5" : "after:w-0"
+                    className={`inline-block py-2 px-3  text-warning-200 hover:text-surface-50 relative text-transition duration-300 after:absolute after:bottom-1 after:left-1/2 after:h-[2px] after:origin-center after:-translate-x-1/2 after:bg-surface-50 after:transition-all after:duration-300 hover:after:w-4/5 ${
+                      activeSection === link.slug ? "after:w-4/5 text-surface-50 font-medium" : "after:w-0"
                     }`}
                   >
                     {link.title}
@@ -122,7 +131,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     className={`relative text-white transition duration-300 before:absolute before:-left-3 before:w-[2px] before:bg-white before:transition-all before:duration-300 hover:before:h-full ${
-                      activeSection === link.title.toLowerCase() ? "before:h-full" : "before:h-0"
+                      activeSection === link.slug ? "before:h-full" : "before:h-0"
                     }`}
                   >
                     {link.title}
@@ -130,7 +139,7 @@ export default function Navbar() {
                 </li>
               ))}
             </ul>
-            <LinkButton href="#" variant="primary" className="w-fit absolute bottom-10">
+            <LinkButton href="/contact/#contact" variant="primary" className="w-fit absolute bottom-10">
               Contact Us
             </LinkButton>
           </div>

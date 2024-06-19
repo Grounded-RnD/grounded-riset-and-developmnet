@@ -40,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <InitialAOS>
         <Navbar />
         <body className={`${open_Sans.className} ${Glancyr.variable}`}>{children}</body>
