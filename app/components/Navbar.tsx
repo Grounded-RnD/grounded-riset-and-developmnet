@@ -27,9 +27,9 @@ export default function Navbar() {
       slug: "about",
     },
     {
-      title: "Products",
-      href: "/#products",
-      slug: "products",
+      title: "Services",
+      href: "/#services",
+      slug: "services",
     },
     {
       title: "Projects",
@@ -72,7 +72,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <React.Fragment>
+    <>
       <nav
         data-aos="fade-down"
         data-aos-delay="3000"
@@ -84,7 +84,7 @@ export default function Navbar() {
             <Image src={GLogo} className="h-8" alt="Grounded Logo" />
           </button>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <LinkButton href="/contact/#contact" variant="primary" className="hidden xl:block">
+            <LinkButton href="/contact" variant="primary" className="hidden xl:block">
               Contact Us
             </LinkButton>
             <button
@@ -149,6 +149,6 @@ export default function Navbar() {
           </div>
         </div>
       </aside>
-    </React.Fragment>
+    </>
   );
 }

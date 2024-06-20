@@ -53,6 +53,7 @@ export default function Header() {
           </div>
         </div>
       </section>
+      <div className="h-[11px] bg-oranges-300 w-full"></div>
     </React.Fragment>
   );
 }
