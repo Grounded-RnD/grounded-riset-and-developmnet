@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <React.Fragment>
       <section id="home" className="h-screen w-full max-w-full" style={{ backgroundImage: "url(/assetJumbotron.png)", backgroundSize: "cover", backgroundPosition: "center" }}>
-        <div className="h-screen lg:pl-20 p-0 w-full bg-dark-50/95 relative">
+        <div className="h-screen lg:pl-20 py-5 w-full bg-dark-50/95 relative">
           <div className="max-w-3xl w-full pt-48 px-4 lg:px-0">
             <h1 className="font-glancyr xl:text-[60px] lg:text-[56px] md:text-[52px] sm:text-[48px] text-[44px] font-normal text-surface-50" data-aos="fade-right" data-aos-duration="1000">
               Grounded

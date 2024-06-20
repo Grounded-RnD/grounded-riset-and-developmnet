@@ -6,10 +6,10 @@ export default function Interest() {
     <React.Fragment>
       <section
         id="join-team"
-        className="flex mt-20 font-glancyr items-center justify-center h-screen bg-cover bg-center max-h-[530px]"
+        className="flex mt-10 font-glancyr items-center justify-center h-screen bg-cover bg-center max-h-[530px]"
         style={{ backgroundImage: `url('/images/interest-background.svg')`, opacity: 0.8 }}
       >
-        <div className="text-center py-6 px-12 md:px-96 bg-opacity-80 rounded">
+        <div className="text-center py-6 px-12 lg:px-96 bg-opacity-80 rounded">
           <h1 className="text-2xl  md:text-5xl font-semibold text-black mb-4">Interested with Grounded?</h1>
           <br />
           <p className="text-base md:text-2xl font-light text-black mb-8">
