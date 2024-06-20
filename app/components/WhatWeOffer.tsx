@@ -45,7 +45,7 @@ export default function WhatWeOffer() {
                 <h3 className="text-2xl font-semibold mb-2">Digital Advertising</h3>
                 <p className="text-gray-400">Our campaigns boost brand visibility and attract potential customers.
 
-</p>
+                </p>
               </div>
 
               <div className="bg-dark-100 p-6 rounded-lg flex flex-col border-2 border-neutral-500">
