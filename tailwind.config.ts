@@ -7,6 +7,7 @@ const config: Config = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'interest-background': "url('public/images/interest-background.svg')",
       },
       colors: {
         "surface-50": "#FFFFFF",

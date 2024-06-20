@@ -11,6 +11,7 @@ export default function WhatWeOffer() {
   return (
     <React.Fragment>
       <section id="services" className="xl:h-screen">
+
         <div className="min-h-screen bg-dark-200 text-white flex items-center justify-center">
           <div className="max-w-7xl mx-auto px-4 py-20 md:py-6">
             <div className="flex justify-center items-center mb-10">
