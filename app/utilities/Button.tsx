@@ -19,11 +19,11 @@ export const LinkButton = ({ children, className, loading, variant, href, target
       <Link
         href={href}
         target={target}
-        className={`font-semibold text-[16px] text-warning-200 border-2 rounded-lg border-warning-400 px-4 py-1 hover:ring-2 hover:ring-warning-200 hover:bg-gradient-to-r hover:from-warning-400 hover:to-warning-300 transition-all duration-200 hover:text-surface-50 focus:bg-warning-400 focus:text-surface-50 focus:ring-warning-100 focus:ring-2
+        className={`font-semibold text-[16px] text-warning-200 border-2 rounded-[12px] border-warning-400 px-4 py-1 hover:ring-2 hover:ring-warning-200 hover:bg-gradient-to-r hover:from-warning-400 hover:to-warning-300 transition-all duration-200 hover:text-surface-50 focus:ring-2 focus:bg-warning-400 focus:text-surface-50 focus:ring-warning-100 
           ${className} 
           flex items-center w-auto`}
       >
-        {loading && (
+        {/* {loading && (
           <>
             <svg aria-hidden="true" className="inline w-5 h-5 text-gray-200 animate-spin dark:text-gray-600 fill-warning-400" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -36,7 +36,7 @@ export const LinkButton = ({ children, className, loading, variant, href, target
               />
             </svg>
           </>
-        )}
+        )} */}
         {loading ? <span className="ml-2">Loading...</span> : children}
       </Link>
     );

@@ -15,6 +15,8 @@ interface NavbarProps {
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
   const [sideActive, setSideActive] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
   const links: NavbarProps[] = [
     {
       title: "Home",
@@ -27,9 +29,9 @@ export default function Navbar() {
       slug: "about",
     },
     {
-      title: "Products",
-      href: "/#products",
-      slug: "products",
+      title: "Services",
+      href: "/#services",
+      slug: "services",
     },
     {
       title: "Projects",
@@ -52,6 +54,7 @@ export default function Navbar() {
       slug: "join-team",
     },
   ];
+
   const handleScroll = () => {
     const sections: NodeListOf<HTMLElement> = document.querySelectorAll("section[id]");
 
@@ -67,24 +70,29 @@ export default function Navbar() {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    setIsMounted(true);
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  if (!isMounted) {
+    return null;
+  }
+
   return (
-    <React.Fragment>
+    <div>
       <nav
         data-aos="fade-down"
         data-aos-delay="3000"
         data-aos-duration="1000"
-        className="bg-dark-50  fixed w-full xl:max-w-[1632px] lg:max-w-[1000px] md:max-w-[720px] sm:max-w-[620px] max-w-[480px] mx-auto z-20 top-8 left-0 right-0 rounded-[16px] shadow-sm"
+        className="bg-dark-50 fixed w-full xl:max-w-[1632px] lg:max-w-[1000px] md:max-w-[720px] sm:max-w-[620px] max-w-[480px] mx-auto z-20 top-8 left-0 right-0 rounded-[16px] shadow-sm"
       >
         <div className="max-w-full flex flex-wrap items-center justify-between p-2 mx-4">
           <button onClick={() => window.location.reload()} className="flex items-center space-x-3 rtl:space-x-reverse">
             <Image src={GLogo} className="h-8" alt="Grounded Logo" />
           </button>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <LinkButton href="/contact/#contact" variant="primary" className="hidden xl:block">
+            <LinkButton href="/contact" variant="primary" className="hidden xl:block">
               Contact Us
             </LinkButton>
             <button
@@ -149,6 +157,6 @@ export default function Navbar() {
           </div>
         </div>
       </aside>
-    </React.Fragment>
+    </div>
   );
 }
