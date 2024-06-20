@@ -10,7 +10,7 @@ import IoTDev from '@/./public/icons/iot-dev.svg'
 export default function WhatWeOffer() {
   return (
     <React.Fragment>
-      <section id="products" className="xl:h-screen">
+      <section id="services" className="xl:h-screen">
         <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
           <div className="max-w-6xl mx-auto px-4 py-8">
             <h2 className="text-4xl font-bold text-center mb-8">What We Offer</h2>
