@@ -42,9 +42,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <InitialAOS>
-        <Navbar />
-        <body className={`${open_Sans.className} ${Glancyr.variable}`}>{children}</body>
-        <Footer />
+        <body className={`${open_Sans.className} ${Glancyr.variable}`}>
+          <Navbar />
+          {children}
+          <Footer />
+        </body>
       </InitialAOS>
     </html>
   );
