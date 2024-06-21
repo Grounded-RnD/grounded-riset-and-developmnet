@@ -37,9 +37,9 @@ export default function Project() {
               </div>
               <h6 className="xl:text-[24px] lg:text-[22px] md:text-[20px] sm:text-[19px] text-[18px] text-surface-50 font-semibold mt-4">AgroSky | Plantation Smart System For Amplify Harvest Gains</h6>
               <div className="w-fit mt-10">
-                <Link href={"#"} className="flex items-center justify-start mb-2 absolute bottom-4">
-                  <p className="xl:text-[14px] lg:text-[13px] md:text-[12px] sm:text-[11px] text-[10px] text-surface-600 font-normal">Read More</p>
-                  <Image src={arrow} alt="arrow" className="xl:scale-100 lg:scale-90 md:scale-75 scale-75" />
+                <Link href={"#"} className="flex items-center justify-start mb-2 absolute bottom-4 group">
+                  <p className="xl:text-[14px] lg:text-[13px] md:text-[12px] sm:text-[11px] text-[10px] group-hover:text-oranges-300 group-hover:font-medium transition-all text-surface-600 font-normal">Read More</p>
+                  <Image src={arrow} alt="arrow" className="xl:scale-100 lg:scale-90 md:scale-75 scale-75 group-hover:text-oranges-300" />
                 </Link>
               </div>
             </section>
@@ -54,8 +54,8 @@ export default function Project() {
               </div>
               <h6 className="xl:text-[24px] lg:text-[22px] md:text-[20px] sm:text-[19px] text-[18px] text-surface-50 font-semibold mt-4">Creative Branding on Instagram</h6>
               <div className="w-fit mt-10">
-                <Link href={"#"} className="flex items-center justify-start mb-2 absolute bottom-4">
-                  <p className="xl:text-[14px] lg:text-[13px] md:text-[12px] sm:text-[11px] text-[10px] text-surface-600 font-normal">Read More</p>
+                <Link href={"#"} className="flex items-center justify-start mb-2 absolute bottom-4 group">
+                  <p className="xl:text-[14px] lg:text-[13px] md:text-[12px] sm:text-[11px] text-[10px] group-hover:text-oranges-300 group-hover:font-medium transition-all text-surface-600 font-normal">Read More</p>
                   <Image src={arrow} alt="arrow" className="xl:scale-100 lg:scale-90 md:scale-75 scale-75" />
                 </Link>
               </div>
@@ -71,8 +71,8 @@ export default function Project() {
               </div>
               <h6 className="xl:text-[24px] lg:text-[22px] md:text-[20px] sm:text-[19px] text-[18px] text-surface-50 font-semibold mt-4">Automation. Advanced Level</h6>
               <div className="w-fit mt-10">
-                <Link href={"#"} className="flex items-center justify-start mb-2 absolute bottom-4">
-                  <p className="xl:text-[14px] lg:text-[13px] md:text-[12px] sm:text-[11px] text-[10px] text-surface-600 font-normal">Read More</p>
+                <Link href={"#"} className="flex items-center justify-start mb-2 absolute bottom-4 group">
+                  <p className="xl:text-[14px] lg:text-[13px] md:text-[12px] sm:text-[11px] text-[10px] group-hover:text-oranges-300 group-hover:font-medium transition-all text-surface-600 font-normal">Read More</p>
                   <Image src={arrow} alt="arrow" className="xl:scale-100 lg:scale-90 md:scale-75 scale-75" />
                 </Link>
               </div>
@@ -88,8 +88,8 @@ export default function Project() {
               </div>
               <h6 className="xl:text-[24px] lg:text-[22px] md:text-[20px] sm:text-[19px] text-[18px] text-surface-50 font-semibold mt-4">First exploration of Blockchain Technology</h6>
               <div className="w-fit mt-10">
-                <Link href={"#"} className="flex items-center justify-start mb-2 absolute bottom-4">
-                  <p className="xl:text-[14px] lg:text-[13px] md:text-[12px] sm:text-[11px] text-[10px] text-surface-600 font-normal">Read More</p>
+                <Link href={"#"} className="flex items-center justify-start mb-2 absolute bottom-4 group">
+                  <p className="xl:text-[14px] lg:text-[13px] md:text-[12px] sm:text-[11px] text-[10px] group-hover:text-oranges-300 group-hover:font-medium transition-all text-surface-600 font-normal">Read More</p>
                   <Image src={arrow} alt="arrow" className="xl:scale-100 lg:scale-90 md:scale-75 scale-75" />
                 </Link>
               </div>
@@ -106,8 +106,8 @@ export default function Project() {
               </div>
               <h6 className="xl:text-[24px] lg:text-[22px] md:text-[20px] sm:text-[19px] text-[18px] text-surface-50 font-semibold mt-4">SmartAca | Better and More Economical Food Production</h6>
               <div className="w-fit mt-10">
-                <Link href={"#"} className="flex items-center justify-start mb-2 absolute bottom-4">
-                  <p className="xl:text-[14px] lg:text-[13px] md:text-[12px] sm:text-[11px] text-[10px] text-surface-600 font-normal">Read More</p>
+                <Link href={"#"} className="flex items-center justify-start mb-2 absolute bottom-4 group">
+                  <p className="xl:text-[14px] lg:text-[13px] md:text-[12px] sm:text-[11px] text-[10px] group-hover:text-oranges-300 group-hover:font-medium transition-all text-surface-600 font-normal">Read More</p>
                   <Image src={arrow} alt="arrow" className="xl:scale-100 lg:scale-90 md:scale-75 scale-75" />
                 </Link>
               </div>
@@ -118,8 +118,8 @@ export default function Project() {
               </div>
               <h6 className="xl:text-[24px] lg:text-[22px] md:text-[20px] sm:text-[19px] text-[18px] text-surface-50 font-semibold mt-4">First Portfolio of Grounded</h6>
               <div className="w-fit mt-10">
-                <Link href={"#"} className="flex items-center justify-start mb-2 absolute bottom-4">
-                  <p className="xl:text-[14px] lg:text-[13px] md:text-[12px] sm:text-[11px] text-[10px] text-surface-600 font-normal">Read More</p>
+                <Link href={"#"} className="flex items-center justify-start mb-2 absolute bottom-4 group">
+                  <p className="xl:text-[14px] lg:text-[13px] md:text-[12px] sm:text-[11px] text-[10px] group-hover:text-oranges-300 group-hover:font-medium transition-all text-surface-600 font-normal">Read More</p>
                   <Image src={arrow} alt="arrow" className="xl:scale-100 lg:scale-90 md:scale-75 scale-75" />
                 </Link>
               </div>
