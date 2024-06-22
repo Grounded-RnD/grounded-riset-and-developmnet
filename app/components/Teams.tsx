@@ -114,14 +114,14 @@ export default function Teams() {
     <React.Fragment>
       <section id="teams" className="h-full w-full bg-dark-200 py-24">
         <div className="flex justify-center items-center gap-x-10">
-          <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1000" className="xl:w-[419px] lg:w-[260px] md:w-[180px] sm:w-[122px] w-[68px] h-[2px] bg-oranges-300"></div>
-          <h1 className="font-glancyr text-oranges-300 xl:text-[48px] text-center lg:text-[44px] md:text-[40px] sm:text-[38px] text-[36px] font-normal" data-aos="fade-down" data-aos-duration="1000">
+          <div data-aos="fade-right" data-aos-duration="500" data-aos-delay="1000" className="xl:w-[419px] lg:w-[260px] md:w-[180px] sm:w-[122px] w-[68px] h-[2px] bg-oranges-300"></div>
+          <h1 className="font-glancyr text-oranges-300 xl:text-[48px] text-center lg:text-[44px] md:text-[40px] sm:text-[38px] text-[36px] font-normal" data-aos="fade-down" data-aos-duration="500">
             Our Teams
           </h1>
-          <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000" className="xl:w-[419px] lg:w-[260px] md:w-[180px] sm:w-[122px] w-[68px] h-[2px] bg-oranges-300"></div>
+          <div data-aos="fade-left" data-aos-duration="500" data-aos-delay="1000" className="xl:w-[419px] lg:w-[260px] md:w-[180px] sm:w-[122px] w-[68px] h-[2px] bg-oranges-300"></div>
         </div>
-        <div className="mt-[100px] navigation-wrapper relative">
-          <main ref={sliderRef} className="keen-slider">
+        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" className="mt-[100px] navigation-wrapper relative">
+          <main ref={sliderRef} className="keen-slider teams-wrapper">
             {Maincard.map((s, i) => (
               <div key={i} className={`keen-slider__slide number-slide${i + 1} bg-surface-900 w-auto h-auto rounded-[12px] text-center px-6 py-4`}>
                 <Image src={s.IMGUrl} alt={s.name} className="w-[96px] h-[96px] rounded-full mx-auto" />
