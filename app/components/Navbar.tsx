@@ -107,7 +107,7 @@ export default function Navbar() {
             ? "top-0 w-[90%] xl:max-w-[1300px] lg:max-w-[1000px] md:max-w-[720px] sm:max-w-[620px] rounded-[16px]"
             : "top-0 max-w-full"
         }`}
-        style={{ transition: "all 0.5s ease-in-out" }}
+        style={{ transition: "all 0.8s ease-in-out" }}
       >
         <div className="max-w-full flex flex-wrap items-center justify-between p-2 mx-4">
           <button onClick={() => window.location.reload()} className="flex items-center space-x-3 rtl:space-x-reverse">
