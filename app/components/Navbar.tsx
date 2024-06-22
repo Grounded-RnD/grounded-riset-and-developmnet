@@ -5,6 +5,7 @@ import GLogo from "@/public/logo/main-logo.svg";
 import Link from "next/link";
 import { LinkButton } from "../utilities/Button";
 import XIcon from "../utilities/XIcon";
+import logoa from "@/public/logo/simpleLogo.svg";
 
 interface NavbarProps {
   title: string;
@@ -16,6 +17,8 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
   const [sideActive, setSideActive] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const [isScrolled100, setIsScrolled100] = useState(false);
+  const [isScrolled200, setIsScrolled200] = useState(false);
 
   const links: NavbarProps[] = [
     {
@@ -66,6 +69,18 @@ export default function Navbar() {
         setActiveSection(section.getAttribute("id")!);
       }
     });
+
+    if (window.scrollY > 200) {
+      setIsScrolled200(true);
+    } else {
+      setIsScrolled200(false);
+    }
+
+    if (window.scrollY > 100) {
+      setIsScrolled100(true);
+    } else {
+      setIsScrolled100(false);
+    }
   };
 
   useEffect(() => {
@@ -85,11 +100,19 @@ export default function Navbar() {
         data-aos="fade-down"
         data-aos-delay="500"
         data-aos-duration="500"
-        className="bg-[#1C1C1C] shadow-[0px_5px_8px_-8px_#FFFFFF] border-b border-surface-300 fixed w-full xl:max-w-[1632px] lg:max-w-[1000px] md:max-w-[720px] sm:max-w-[620px] max-w-[480px] mx-auto z-20 top-8 left-0 right-0 rounded-[16px] "
+        className={`bg-[#1C1C1C] shadow-[0px_5px_8px_-8px_#FFFFFF] fixed w-full mx-auto z-20 left-0 right-0 transition-all duration-300 ${
+          isScrolled200
+            ? "top-8 w-[90%] xl:max-w-[1300px] lg:max-w-[1000px] md:max-w-[720px] sm:max-w-[620px] rounded-[16px]"
+            : isScrolled100
+            ? "top-0 w-[90%] xl:max-w-[1300px] lg:max-w-[1000px] md:max-w-[720px] sm:max-w-[620px] rounded-[16px]"
+            : "top-0 max-w-full"
+        }`}
+        style={{ transition: "all 0.8s ease-in-out" }}
       >
         <div className="max-w-full flex flex-wrap items-center justify-between p-2 mx-4">
           <button onClick={() => window.location.reload()} className="flex items-center space-x-3 rtl:space-x-reverse">
-            <Image src={GLogo} className="h-8" alt="Grounded Logo" />
+            <Image src={GLogo} className={`h-8 transition-all duration-500 ${isScrolled200 ? "hidden" : "block"}`} alt="Grounded Logo" />
+            <Image src={GLogo} className={` transition-all duration-500 ${isScrolled200 ? "block" : "hidden"}`} alt="Alternate Logo" />
           </button>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <LinkButton href="/contact" variant="primary" className="hidden xl:block">
