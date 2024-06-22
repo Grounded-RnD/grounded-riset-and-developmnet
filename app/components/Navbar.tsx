@@ -5,7 +5,8 @@ import GLogo from "@/public/logo/main-logo.svg";
 import Link from "next/link";
 import { LinkButton } from "../utilities/Button";
 import XIcon from "../utilities/XIcon";
-import logoa from "@/public/logo/simpleLogo.svg";
+import logoa from "@/public/logo/logo1.png";
+import logob from "@/public/logo/B.svg";
 
 interface NavbarProps {
   title: string;
@@ -110,9 +111,14 @@ export default function Navbar() {
         style={{ transition: "all 0.8s ease-in-out" }}
       >
         <div className="max-w-full flex flex-wrap items-center justify-between p-2 mx-4">
-          <button onClick={() => window.location.reload()} className="flex items-center space-x-3 rtl:space-x-reverse">
-            <Image src={GLogo} className={`h-8 transition-all duration-500 ${isScrolled200 ? "hidden" : "block"}`} alt="Grounded Logo" />
-            <Image src={GLogo} className={` transition-all duration-500 ${isScrolled200 ? "block" : "hidden"}`} alt="Alternate Logo" />
+          <button onClick={() => window.location.reload()} className="flex items-center space-x-3 rtl:space-x-reverse relative">
+            <div className="flex justify-center items-center gap-x-2">
+              <Image style={{ transition: "all 0.8s ease-in-out" }} src={logoa} className={`w-8 h-8  ${isScrolled200 ? "opacity-100" : "opacity-100"}`} alt="Alternate Logo" />
+              <div className="w-auto  overflow-hidden">
+                <Image style={{ transition: "all 0.8s ease-in-out" }} src={logob} className={`  ${isScrolled200 ? "-translate-x-60 opacity-0" : "opacity-100"}`} alt="Alternate Logo" />
+              </div>
+            </div>
+            {/* <Image style={{ transition: "all 0.8s ease-in-out" }} src={GLogo} className={`h-8 transition-all duration-500 ${isScrolled200 ? "opacity-0 absolute" : "opacity-100"}`} alt="Grounded Logo" /> */}
           </button>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <LinkButton href="/contact" variant="primary" className="hidden xl:block">
@@ -135,7 +141,7 @@ export default function Navbar() {
           <div className="items-center justify-between hidden w-full xl:flex xl:w-auto xl:order-1" id="navbar-sticky">
             <ul className="flex flex-col p-4 md:p-0 mt-4 text-warning-200 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 ">
               {links.map((link, i) => (
-                <li key={i}>
+                <li key={i} style={{ transition: "all 0.8s ease-in-out" }}>
                   <Link
                     href={link.href}
                     className={`inline-block py-2 px-3 hover:text-surface-50 relative text-transition duration-300 after:absolute after:bottom-1 after:left-1/2 after:h-[2px] after:origin-center after:-translate-x-1/2 after:bg-surface-50 after:transition-all after:duration-300 hover:after:w-4/5 active:text-surface-50 ${
