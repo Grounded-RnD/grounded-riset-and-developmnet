@@ -83,9 +83,9 @@ export default function Navbar() {
     <div>
       <nav
         data-aos="fade-down"
-        data-aos-delay="3000"
-        data-aos-duration="1000"
-        className="bg-dark-50 fixed w-full xl:max-w-[1632px] lg:max-w-[1000px] md:max-w-[720px] sm:max-w-[620px] max-w-[480px] mx-auto z-20 top-8 left-0 right-0 rounded-[16px] shadow-sm"
+        data-aos-delay="500"
+        data-aos-duration="500"
+        className="bg-[#1C1C1C] shadow-[0px_5px_8px_-8px_#FFFFFF] border-b border-surface-300 fixed w-full xl:max-w-[1632px] lg:max-w-[1000px] md:max-w-[720px] sm:max-w-[620px] max-w-[480px] mx-auto z-20 top-8 left-0 right-0 rounded-[16px] "
       >
         <div className="max-w-full flex flex-wrap items-center justify-between p-2 mx-4">
           <button onClick={() => window.location.reload()} className="flex items-center space-x-3 rtl:space-x-reverse">
