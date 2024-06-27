@@ -13,6 +13,8 @@ import whitelinkedin from "@/public/icons/linkedin-white.svg";
 import whitewhatsapp from "@/public/icons/whatsapp-white.svg";
 import Link from "next/link";
 import Arrow from "../utilities/ArrowCarousel";
+import { dataUser } from "../data/data";
+import { useRouter } from "next/navigation";
 
 interface CardProops {
   IMGUrl: StaticImageData;
@@ -25,6 +27,7 @@ interface CardProops {
 }
 
 export default function Teams() {
+  const router = useRouter();
   const Maincard: CardProops[] = [
     {
       IMGUrl: fahrell,
@@ -122,24 +125,30 @@ export default function Teams() {
         </div>
         <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" className="mt-[100px] navigation-wrapper relative">
           <main ref={sliderRef} className="keen-slider teams-wrapper">
-            {Maincard.map((s, i) => (
-              <div key={i} className={`keen-slider__slide number-slide${i + 1} bg-surface-900 w-auto h-auto rounded-[12px] text-center px-6 py-4`}>
-                <Image src={s.IMGUrl} alt={s.name} className="w-[96px] h-[96px] rounded-full mx-auto" />
-                <h3 className="text-surface-50 font-semibold xl:text-[20px] lg:text-[19px] md:text-[18px] mt-4 mb-2 sm:text-[17px] text-[16px]">{s.name}</h3>
+            {dataUser.map((s, i) => (
+              <div
+                onClick={() => router.push(`/profile/${s.slug}`)}
+                key={i}
+                className={`keen-slider__slide number-slide${
+                  i + 1
+                } relative bg-surface-900 hover:bg-surface-900/50 transition-colors duration-200 w-auto cursor-pointer hover:ring-2 my-2 hover:ring-oranges-300 h-auto rounded-[12px] text-center px-6 py-4`}
+              >
+                <Image src={s.img} alt={s.fullname} className="w-[96px] h-[96px] rounded-full mx-auto" />
+                <h3 className="text-surface-50 font-semibold xl:text-[20px] lg:text-[19px] md:text-[18px] mt-4 mb-2 sm:text-[17px] text-[16px]">{s.fullname}</h3>
                 <p className="xl:text-[16px] lg:text-[15px] md:text-[14px] sm:text-[13px] text-[12px] mb-1 font-light text-surface-50">
-                  <i>{s.position}</i>
+                  <i>{s.jabatan}</i>
                 </p>
                 <p className="xl:text-[16px] lg:text-[15px] md:text-[14px] sm:text-[13px] text-[12px] font-light text-surface-50">
-                  <i>{s.skillSet}</i>
+                  <i>{s.bidang}</i>
                 </p>
                 <div className="mt-4 bg-dark-100 px-3 py-2 flex gap-x-2 justify-center rounded-[12px] w-fit mx-auto">
-                  <Link href={s.github}>
+                  <Link href={s.github.href} target="_blank">
                     <Image src={whitegithub} alt="github" />
                   </Link>
-                  <Link href={s.linkedin}>
+                  <Link href={s.linkedin.href} target="_blank">
                     <Image src={whitelinkedin} alt="linkedin" />
                   </Link>
-                  <Link href={s.whatsapp}>
+                  <Link href={s.whatsapp.href} target="_blank">
                     <Image src={whitewhatsapp} alt="whatsapp" />
                   </Link>
                 </div>

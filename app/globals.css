@@ -16,6 +16,26 @@
   }
 }
 
+::-webkit-scrollbar {
+  @apply w-[5px];
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-surface-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-surface-400;
+}
+
+::selection {
+  @apply bg-white bg-opacity-70 text-black;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: #161616;
