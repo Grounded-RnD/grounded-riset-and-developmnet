@@ -6,7 +6,7 @@ export default function ProgressBarProvider({ children }: Readonly<{ children: R
   return (
     <>
       {children}
-      <ProgressBar height="3px" color="#A7AEB4" shallowRouting options={{ showSpinner: true }} />
+      <ProgressBar height="3px" color="#A7AEB4" shallowRouting options={{ showSpinner: false }} />
     </>
   );
 }
