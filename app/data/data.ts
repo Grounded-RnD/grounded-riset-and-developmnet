@@ -38,8 +38,16 @@ export const dataUser: UserProops[] = [
     },
     skills: [
       {
-        skill: "",
-        tech_stack: ["", "", ""],
+        skill: "IoT Engineering",
+        tech_stack: ["Arduino Uno", "C++", "Python"],
+      },
+      {
+        skill: "UI/UX Designer",
+        tech_stack: ["Figma", "Ilustrator"],
+      },
+      {
+        skill: "Frontend Developer",
+        tech_stack: ["TailwindCSS", "Nextjs"],
       },
     ],
     experience: ["", "", ""],
@@ -77,8 +85,12 @@ export const dataUser: UserProops[] = [
     },
     skills: [
       {
-        skill: "",
-        tech_stack: ["", "", ""],
+        skill: "UI/UX Designer",
+        tech_stack: ["Figma"],
+      },
+      {
+        skill: "Android Developer",
+        tech_stack: ["Flutter"],
       },
     ],
     experience: ["", "", ""],
@@ -155,8 +167,16 @@ export const dataUser: UserProops[] = [
     },
     skills: [
       {
-        skill: "",
-        tech_stack: ["", "", ""],
+        skill: "Fullstack Developer",
+        tech_stack: ["Nextjs", "TailwindCSS", "Javascript", "Tyescript", "PHP"],
+      },
+      {
+        skill: "UI/UX Designer",
+        tech_stack: ["Figma"],
+      },
+      {
+        skill: "Organization Management",
+        tech_stack: ["-"],
       },
     ],
     experience: ["", "", ""],
@@ -194,8 +214,12 @@ export const dataUser: UserProops[] = [
     },
     skills: [
       {
-        skill: "",
-        tech_stack: ["", "", ""],
+        skill: "Frontend Developer",
+        tech_stack: ["HTML", "TailwindCSS"],
+      },
+      {
+        skill: "Android Developer",
+        tech_stack: ["Flutter", "Dart"],
       },
     ],
     experience: ["", "", ""],

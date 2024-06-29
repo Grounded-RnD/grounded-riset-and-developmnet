@@ -284,33 +284,17 @@ const ProfilePage = () => {
                 <div className="overflow-hidden">
                   <table className="min-w-full divide-y divide-gray-200">
                     <tbody className="divide-y divide-zinc-700">
-                      <tr>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <Image src={SkillWebFront} alt="Website" className="w-[25px] md:w-[33px] mx-auto" />
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-[16px] font-light">
-                          <p className="text-[16px] md:text-[16px]">FrontEnd Developer</p>
-                          <p className="text-[10px] md:text-[12px]">HTML, CSS, React, Tailwind, and 5+</p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <Image src={SkillMobile} alt="LinkedIn" className="w-[20px] md:w-[28px] mx-auto" />
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-[16px] font-light">
-                          <p className="text-[16px] md:text-[16px]">Android & iOS Developer</p>
-                          <p className="text-[10px] md:text-[12px]">Dart, Flutter, Firebase</p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <Image src={SkillDataScience} alt="Instagram" className="w-[20px] md:w-[28px] mx-auto" />
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-[16px] font-light">
-                          <p className="text-[16px] md:text-[16px]">Data Science</p>
-                          <p className="text-[10px] md:text-[12px]">Orange Data Science</p>
-                        </td>
-                      </tr>
+                      {user.skills.map((skil, i) => (
+                        <tr key={i}>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <p className="text-xl">{i + 1}.</p>
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-[16px] font-light">
+                            <p className="text-[16px] md:text-[16px]">{skil.skill}</p>
+                            <p className="text-[10px] md:text-[12px] truncate">{skil.tech_stack.join(", ")}</p>
+                          </td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>
@@ -321,9 +305,11 @@ const ProfilePage = () => {
         <section className="col-span-1 bg-dark-50 p-6 rounded-2xl ">
           <h2 className="text-xl md:text-xl mb-4">Experience</h2>
           {user.experience.map((e, i) => (
-            <p key={i} className="text-[16px] leading-relaxed">
-              {i + 1}. {e}
-            </p>
+            <div key={i} className="px-6 py-4 whitespace-nowrap border-b border-b-zinc-700">
+              <p className="text-[16px] leading-relaxed">
+                {i + 1}. {e}
+              </p>
+            </div>
           ))}
         </section>
       </main>

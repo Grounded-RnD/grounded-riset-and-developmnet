@@ -25,13 +25,12 @@ interface socialsProops {
   };
 }
 
+interface Skill {
+  skill: string;
+  tech_stack: string[];
+}
 interface skillsProops extends socialsProops {
-  skills: [
-    {
-      skill: string;
-      tech_stack: string[];
-    }
-  ];
+  skills: [...Skill[]];
 }
 
 interface experienceProops extends skillsProops {
