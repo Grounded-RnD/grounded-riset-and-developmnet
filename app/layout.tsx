@@ -22,11 +22,6 @@ const Glancyr = localFont({
       weight: "500",
       style: "medium",
     },
-    {
-      path: "../public/font/Glancyr-Semibold.otf",
-      weight: "600",
-      style: "semibold",
-    },
   ],
   variable: "--font-glancyr",
 });
