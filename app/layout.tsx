@@ -1,10 +1,12 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Open_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import InitialAOS from "@/services/InitialAOS";
+import ProgressBarProvider from "./utilities/ProgressBarProvider";
+import Wrapper from "@/services/Wrapper";
 
 const open_Sans = Open_Sans({ subsets: ["latin"] });
 
@@ -20,11 +22,6 @@ const Glancyr = localFont({
       weight: "500",
       style: "medium",
     },
-    {
-      path: "../public/font/Glancyr-Semibold.otf",
-      weight: "600",
-      style: "semibold",
-    },
   ],
   variable: "--font-glancyr",
 });
@@ -33,7 +30,10 @@ export const metadata: Metadata = {
   title: "Grounded | Bussiness | Riset & Development",
   description: "Till Infinity and Beyond",
 };
-
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -41,13 +41,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <InitialAOS>
-        <body className={`${open_Sans.className} ${Glancyr.variable}`}>
-          <Navbar />
-          {children}
-          <Footer />
-        </body>
-      </InitialAOS>
+      <Wrapper>
+        <InitialAOS>
+          <body className={`${open_Sans.className} ${Glancyr.variable}`}>
+            <ProgressBarProvider>
+              <Navbar />
+              {children}
+              <Footer />
+            </ProgressBarProvider>
+          </body>
+        </InitialAOS>
+      </Wrapper>
     </html>
   );
 }

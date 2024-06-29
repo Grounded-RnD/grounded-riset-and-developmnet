@@ -18,7 +18,7 @@ export default function Interest() {
             data-aos="fade-down"
             data-aos-duration="500"
             href={"/contact"}
-            className="px-6 py-2 font-sans bg-transparent border-2 hover:text-surface-50 hover:border-surface-50 focus:ring-2 focus:ring-surface-50 transition-all duration-200 border-black text-black text-base md:text-2xl font-semibold rounded-xl "
+            className="px-6 py-2 font-sans bg-transparent border-2 hover:text-surface-50 hover:border-surface-50 focus:ring-2 focus:ring-surface-50  border-black text-black text-base md:text-2xl font-semibold rounded-xl transition-all duration-200"
           >
             Contact Us
           </Link>
