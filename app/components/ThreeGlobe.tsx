@@ -4,6 +4,7 @@
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import Globe from 'three-globe';
+import WorldMap from '@/public/images/world-map-2.jpeg';
 
 const ThreeGlobe: React.FC = () => {
   const globeContainer = useRef<HTMLDivElement | null>(null);
@@ -22,9 +23,9 @@ const ThreeGlobe: React.FC = () => {
 
     // Set up the globe
     const globe = new Globe()
-      .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg') // Replace with your own globe texture URL
+      .globeImageUrl(WorldMap.src) // Pass the URL string
       .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-bump.jpg') // Replace with your own bump map texture URL
-      .showGraticules(false) // Show grid lines
+      .showGraticules(true) // Show grid lines
       .arcsData([]) // Optional: You can add arcs here if needed
       .labelsData([]) // Optional: You can add labels here if needed
       .pointsData([]) // Optional: You can add points here if needed
@@ -46,14 +47,14 @@ const ThreeGlobe: React.FC = () => {
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
     scene.add(ambientLight);
 
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.2);
     directionalLight.position.set(5, 3, 5).normalize();
     scene.add(directionalLight);
 
     // Animation loop
     const animate = () => {
       requestAnimationFrame(animate);
-      globe.rotation.y += 0.001; // Rotate the globe slowly
+      globe.rotation.y += 0.0015; // Rotate the globe slowly
       renderer.render(scene, camera);
     };
 

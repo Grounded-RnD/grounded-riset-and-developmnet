@@ -9,7 +9,7 @@ import ThreeGlobe from "./ThreeGlobe";
 
 export default function SolutionForEveryone() {
   return (
-    <section id="services" className="xl:h-screen">
+    <section id="solutionforeveryone" className="xl:h-screen">
       <div className="min-h-screen bg-dark-200 text-white items-center justify-center pt-20">
         <div className="max-w-7xl mx-auto px-4 py-20 md:py-6">
           <div className="flex justify-center items-center mb-10">
