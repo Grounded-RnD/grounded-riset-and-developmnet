@@ -179,7 +179,18 @@ export const dataUser: UserProops[] = [
         tech_stack: ["-"],
       },
     ],
-    experience: ["Software Engineer of LuminaryStudios", " Programmer of MokletDev", "Maintainer Manager of Moklet.org", "Head of Intra School Organization MTsN 1 Malang City", "Commision II of MPK Moklet", "Voulenteer of Event IIBF Malang", " Head of Class in MTsN 1 Malang City Period"],
+    experience: [
+      "Software Engineer of LuminaryStudios",
+      "Programmer of MokletDev",
+      "Maintainer Manager of Moklet.org",
+      "Head of Intra School Organization MTsN 1 Malang City period 2020/2021",
+      "Commision II of MPK Moklet",
+      "Voulenteer of Event IIBF Malang",
+      "Head of Class in MTsN 1 Malang City Period 2021/2022",
+      "Member of the leadership of the Malang Muhammadiyah youth branch period 2021/2022",
+      "Graduation Committee period 2021/2022",
+      "Social Service Committee period 2021/2022",
+    ],
   },
   {
     fullname: "Haza Nasrullah",
@@ -226,6 +237,12 @@ export const dataUser: UserProops[] = [
         tech_stack: ["Orange Data Mining", "Python"],
       },
     ],
-    experience: ["Team Leader for Village Empowerment Program through Technology", "Digital Marketing Team Member at a Property Agency", "Animator for an Animation Project about Batu City", "3D House Designer for Various Housing Project", "Featured in the School Magazine"],
+    experience: [
+      "Team Leader for Village Empowerment Program through Technology",
+      "Digital Marketing Team Member at a Property Agency",
+      "Animator for an Animation Project about Batu City",
+      "3D House Designer for Various Housing Project",
+      "Featured in the School Magazine",
+    ],
   },
 ];

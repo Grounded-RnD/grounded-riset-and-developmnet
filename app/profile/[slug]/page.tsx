@@ -12,25 +12,14 @@ import SkillDataScience from "@/./public/skill/data-science.svg";
 import { getData } from "@/services/FetchDataUser";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import ModalProfile from "@/app/components/utils/ModalProfile";
 
 const ProfilePage = () => {
   const pathname = usePathname();
   const slug = pathname.split("/").pop();
   const [user, setUser] = useState<UserProops | null>(null);
   const [error, setError] = useState<string | null>(null);
-
-  function displayArrayWithMaxLength(array: string[], maxLength: number){
-    if(array?.length > maxLength){
-      return array.slice(0, maxLength).map(String).concat("");
-    }
-    return array.map(String);
-  }
-
-  const maxLength = 3;
-  const dataUser = user.experience
-
-  // const result = displayArrayWithMaxLength(dataUser, maxLength)
-  console.log(dataUser)
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     if (slug) {
@@ -183,8 +172,34 @@ const ProfilePage = () => {
       </>
     );
   }
+
+  function displayArrayWithMaxLength(array: string[], maxLength: number) {
+    if (array?.length > maxLength) {
+      return array.slice(0, maxLength).map(String);
+    }
+    return array.map(String);
+  }
+
+  const maxLength = 3;
+  const dataUser = user.experience;
+
+  const result = displayArrayWithMaxLength(dataUser, maxLength);
+
+  function handleClose() {
+    setIsVisible(false);
+  }
+
   return (
     <div className="bg-dark-300 text-surface-50 pt-10">
+      <ModalProfile onCloce={handleClose} onOpen={isVisible} user={user.fullname}>
+        {user.experience.map((e, i) => (
+          <div key={i} className="px-6 py-4 whitespace-nowrap border-b border-b-zinc-700">
+            <p className="text-[16px] leading-relaxed">
+              {i + 1}. {e}
+            </p>
+          </div>
+        ))}
+      </ModalProfile>
       <main className="p-4 md:p-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
         <section className="col-span-1 bg-dark-50 p-6 rounded-2xl flex flex-col items-center justify-center">
           <Image src={user.img} alt="Profile" className="rounded-full w-[150px] md:w-[206px] mx-auto" />
@@ -317,13 +332,22 @@ const ProfilePage = () => {
         </section>
         <section className="col-span-1 bg-dark-50 p-6 rounded-2xl ">
           <h2 className="text-xl md:text-xl mb-4">Experience</h2>
-          {user.experience.map((e, i) => (
+          {result.map((e, i) => (
             <div key={i} className="px-6 py-4 whitespace-nowrap border-b border-b-zinc-700">
-              <p className="text-[16px] leading-relaxed">
+              <p className="text-[16px] leading-relaxed truncate">
                 {i + 1}. {e}
               </p>
             </div>
           ))}
+          {user.experience && user.experience.length > maxLength && (
+            <button
+              type="button"
+              onClick={() => setIsVisible(true)}
+              className="font-semibold mt-3 ml-6 text-[16px] text-warning-200 border-2 rounded-[12px] border-warning-400 px-4 py-1 hover:ring-2 hover:ring-warning-200 hover:bg-gradient-to-r hover:from-warning-400 hover:to-warning-300 transition-all duration-200 hover:text-surface-50 focus:ring-2 focus:bg-warning-400 focus:text-surface-50 focus:ring-warning-100"
+            >
+              See details
+            </button>
+          )}
         </section>
       </main>
     </div>
