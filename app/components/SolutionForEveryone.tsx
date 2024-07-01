@@ -4,12 +4,14 @@ import AgroSky from "@/public/logo/agrosky.svg";
 import NexaLab from "@/public/logo/nexalab.svg";
 import SmartCounselling from "@/public/logo/smart-counselling.svg";
 import Smartaca from "@/public/logo/smartaca.svg";
+import NexBook from "@/public/logo/nexbook2.png";
 import ThreeGlobe from "./ThreeGlobe";
+
 
 export default function SolutionForEveryone() {
   return (
     <section id="solutionforeveryone" className="xl:h-screen overflow-hidden">
-      <div className="min-h-screen bg-dark-200 text-white items-center justify-center pt-20">
+      <div className="min-h-screen bg-dark-200 text-white items-center justify-center pt-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 py-20 md:py-6">
           <div className="flex justify-center items-center mb-10">
             <div className="mx-10 text-center" data-aos="fade-down" data-aos-duration="500">
@@ -37,9 +39,9 @@ export default function SolutionForEveryone() {
               </div>
 
               <div>
-                <h3 className="mt-20 text-sm font-normal">Fisheries Sector</h3>
+                <h3 className="mt-20 text-sm font-normal">Blockchain Sector</h3>
                 <div className="mt-7 flex items-center space-x-4">
-                  <Image src={AgroSky} alt="AgroSky Logo" className="object-contain w-44 h-auto" />
+                  <Image src={NexBook} alt="AgroSky Logo" className="object-contain w-44 h-auto" />
                 </div>
               </div>
             </div>
