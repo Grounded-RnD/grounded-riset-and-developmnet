@@ -332,13 +332,23 @@ const ProfilePage = () => {
         </section>
         <section className="col-span-1 bg-dark-50 p-6 rounded-2xl ">
           <h2 className="text-xl md:text-xl mb-4">Experience</h2>
-          {result.map((e, i) => (
-            <div key={i} className="px-6 py-4 whitespace-nowrap border-b border-b-zinc-700">
-              <p className="text-[16px] leading-relaxed truncate">
-                {i + 1}. {e}
+          {user.experience && user.experience.length !== 0 ? (
+            <>
+              {result.map((e, i) => (
+                <div key={i} className="px-6 py-4 whitespace-nowrap border-b border-b-zinc-700">
+                  <p className="text-[16px] leading-relaxed truncate">
+                    {i + 1}. {e}
+                  </p>
+                </div>
+              ))}
+            </>
+          ) : (
+            <div className="px-6 py-4 whitespace-nowrap border-b border-b-zinc-700">
+              <p className="text-[16px] leading-relaxed font-semibold">
+                <i>Data Belum Terisi</i>
               </p>
             </div>
-          ))}
+          )}
           {user.experience && user.experience.length > maxLength && (
             <button
               type="button"
