@@ -171,8 +171,8 @@ export const dataUser: UserProops[] = [
         tech_stack: ["Nextjs", "TailwindCSS", "Javascript", "Tyescript", "PHP"],
       },
       {
-        skill: "UI/UX Designer",
-        tech_stack: ["Figma"],
+        skill: "Project Management",
+        tech_stack: ["Trello", "Github Project", "Notion"],
       },
       {
         skill: "Organization Management",
