@@ -7,12 +7,13 @@ import Smartaca from "@/public/logo/smartaca.svg";
 import NexBook from "@/public/logo/nexbook2.png";
 import dynamic from "next/dynamic";
 import kotak from "@/public/images/kotak_kotak_wkwk.png";
+import jamScare from "@/public/project/LogoJamscare.png";
 const ThreeGlobe = dynamic(() => import("../components/ThreeGlobe"), {
   ssr: false,
 });
 export default function SolutionForEveryone() {
   return (
-    <section id="solutionforeveryone" className="xl:h-screen overflow-hidden relative">
+    <section id="solutionforeveryone" className="h-full relative">
       <div className="min-h-screen bg-dark-200 text-white items-center justify-center pt-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 py-20 md:py-6">
           <div className="flex justify-start items-center mb-10">
@@ -30,12 +31,12 @@ export default function SolutionForEveryone() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="space-y-8 z-10">
+            <div className="z-10">
               <div>
                 <h3 data-aos="fade-right" data-aos-duration="500" className="text-sm font-normal">
                   Agriculture & Livestock Sector
                 </h3>
-                <div className="mt-7 flex items-center space-x-12">
+                <div className="mt-7 flex flex-wrap items-center justify-start gap-x-12 gap-y-8">
                   <Image data-aos="zoom-in" data-aos-duration="500" src={Smartaca} alt="Smartaca Logo" className="object-contain w-44 h-auto" />
                   <Image data-aos="zoom-in" data-aos-duration="500" src={AgroSky} alt="AgroSky Logo" className="object-contain w-44 h-auto" />
                 </div>
@@ -45,9 +46,10 @@ export default function SolutionForEveryone() {
                 <h3 data-aos="fade-right" data-aos-duration="500" className="mt-20 text-sm font-normal">
                   Health & Education Sector
                 </h3>
-                <div className="mt-7 flex items-center space-x-12">
+                <div className="mt-7 flex flex-wrap justify-start items-center gap-x-12 gap-y-8">
                   <Image data-aos="zoom-in" data-aos-duration="500" src={NexaLab} alt="NexaLab Logo" className="object-contain w-44 h-auto" />
                   <Image data-aos="zoom-in" data-aos-duration="500" src={SmartCounselling} alt="SmartCounselling Logo" className="object-contain w-60 h-auto" />
+                  <Image data-aos="zoom-in" data-aos-duration="500" src={jamScare} alt="SmartCounselling Logo" className="object-contain w-44 h-auto" />
                 </div>
               </div>
 
@@ -55,7 +57,7 @@ export default function SolutionForEveryone() {
                 <h3 data-aos="fade-right" data-aos-duration="500" className="mt-20 text-sm font-normal">
                   Blockchain Sector
                 </h3>
-                <div className="mt-7 flex items-center space-x-4">
+                <div className="mt-7 flex flex-wrap items-center justify-start gap-x-12 gap-y-8">
                   <Image data-aos="zoom-in" data-aos-duration="500" src={NexBook} alt="AgroSky Logo" className="object-contain w-44 h-auto" />
                 </div>
               </div>
@@ -64,7 +66,7 @@ export default function SolutionForEveryone() {
             <Image data-aos="zoom-in" data-aos-duration="500" src={kotak} alt="opsional" className="absolute z-0 top-0" />
 
             <div className="flex items-center justify-center lg:justify-end relative" data-aos="fade-left" data-aos-duration="500">
-              <div className="absolute left-64 w-fit h-full lg:h-[800px] lg:w-[800px]">
+              <div className="absolute left-64 w-fit h-full size-10 lg:h-[800px] lg:w-[800px]">
                 <ThreeGlobe />
               </div>
             </div>
