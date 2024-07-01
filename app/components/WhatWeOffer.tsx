@@ -48,8 +48,8 @@ export default function WhatWeOffer() {
   ];
   return (
     <React.Fragment>
-      <section id="services" className="xl:h-screen">
-        <div className="min-h-screen bg-dark-200 text-white flex items-center justify-center pt-20">
+      <section id="services" className="h-full">
+        <div className="min-h-screen bg-dark-200 text-white flex items-center justify-center py-20">
           <div className="max-w-7xl mx-auto px-4 py-20 md:py-6">
             <div className="flex justify-center items-center mb-10">
               <div data-aos="fade-right" data-aos-duration="500" data-aos-delay="500" className="xl:w-[383px] lg:w-[260px] md:w-[180px] sm:w-[122px] w-[68px] h-[2px] bg-oranges-300"></div>
