@@ -11,7 +11,7 @@ import Interest from "./components/Interest";
 
 export default function Home() {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Header />
       <SustainableTechnology />
       <SolutionForEveryone />
@@ -22,6 +22,6 @@ export default function Home() {
       <TechStack />
       <FeaturedOn />
       <Interest />
-    </>
+    </div>
   );
 }

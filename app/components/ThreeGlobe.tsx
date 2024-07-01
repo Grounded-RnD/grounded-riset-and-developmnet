@@ -1,4 +1,3 @@
-// components/ThreeGlobe.tsx
 "use client";
 
 import React, { useEffect, useRef } from "react";
@@ -10,6 +9,9 @@ const ThreeGlobe = () => {
   const globeContainer = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
     const container = globeContainer.current;
 
     if (!container) return;

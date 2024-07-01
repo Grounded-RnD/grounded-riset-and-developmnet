@@ -93,7 +93,7 @@ export const dataUser: UserProops[] = [
         tech_stack: ["Flutter"],
       },
     ],
-    experience: ["", "", ""],
+    experience: [],
   },
   {
     fullname: "Dviki Wahyudi",
@@ -129,7 +129,7 @@ export const dataUser: UserProops[] = [
     skills: [
       {
         skill: "Project Managing",
-        tech_stack: ["", "", ""],
+        tech_stack: [],
       },
     ],
     experience: ["Member of Metic Moklet Organization", "", ""],
