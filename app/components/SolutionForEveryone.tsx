@@ -7,7 +7,6 @@ import Smartaca from "@/public/logo/smartaca.svg";
 import NexBook from "@/public/logo/nexbook2.png";
 import ThreeGlobe from "./ThreeGlobe";
 
-
 export default function SolutionForEveryone() {
   return (
     <section id="solutionforeveryone" className="xl:h-screen overflow-hidden">
@@ -48,7 +47,7 @@ export default function SolutionForEveryone() {
 
             <div className="flex items-center justify-center lg:justify-end relative">
               <div className="absolute left-64 w-fit h-full lg:h-[800px] lg:w-[800px]">
-                <ThreeGlobe/>
+                <ThreeGlobe />
               </div>
             </div>
           </div>
