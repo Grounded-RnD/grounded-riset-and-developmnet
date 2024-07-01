@@ -19,6 +19,19 @@ const ProfilePage = () => {
   const [user, setUser] = useState<UserProops | null>(null);
   const [error, setError] = useState<string | null>(null);
 
+  function displayArrayWithMaxLength(array: string[], maxLength: number){
+    if(array?.length > maxLength){
+      return array.slice(0, maxLength).map(String).concat("");
+    }
+    return array.map(String);
+  }
+
+  const maxLength = 3;
+  const dataUser = user.experience
+
+  // const result = displayArrayWithMaxLength(dataUser, maxLength)
+  console.log(dataUser)
+
   useEffect(() => {
     if (slug) {
       fetch(`/api/data/${slug}`)
