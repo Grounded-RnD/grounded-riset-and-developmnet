@@ -50,7 +50,7 @@ export const dataUser: UserProops[] = [
         tech_stack: ["TailwindCSS", "Nextjs"],
       },
     ],
-    experience: ["", "", ""],
+    experience: ["Member of Metic Moklet Organization", "Programmer of MokletDev", "Minecraft Server Designer", "Discord Bot Developer", "3D Product Designer", "IoT Engineer for various project"],
   },
   {
     fullname: "Ryo Hariyono Angwyn",
@@ -93,13 +93,13 @@ export const dataUser: UserProops[] = [
         tech_stack: ["Flutter"],
       },
     ],
-    experience: [],
+    experience: ["Member of the 2nd Year OSIS of SMPK Kosayu 2 Malang"],
   },
   {
     fullname: "Dviki Wahyudi",
     slug: "Dviki_Wahyudi",
     img: viki,
-    email: "viki@grounded.org",
+    email: "dviki@grounded.org",
     phone: "+62 812-3362-8941",
     address: "Malang City, Indonesia",
     jabatan: "Chief Operating Officer",
@@ -128,11 +128,15 @@ export const dataUser: UserProops[] = [
     },
     skills: [
       {
-        skill: "Project Managing",
-        tech_stack: [],
+        skill: "Front end Developer",
+        tech_stack: ["HTML", "CSS", "Bootstrap"],
+      },
+      {
+        skill: "Project Management",
+        tech_stack: ["-"],
       },
     ],
-    experience: ["Member of Metic Moklet Organization", "", ""],
+    experience: ["Member of Metic Moklet Organization", "Commision I of MPK Moklet"],
   },
   {
     fullname: "Naufal Nabil Ramadhan",
@@ -185,6 +189,7 @@ export const dataUser: UserProops[] = [
       "Maintainer Manager of Moklet.org",
       "Head of Intra School Organization MTsN 1 Malang City period 2020/2021",
       "Commision II of MPK Moklet",
+      "Top 10 National Junior Web Developer",
       "Voulenteer of Event IIBF Malang",
       "Head of Class in MTsN 1 Malang City Period 2021/2022",
       "Member of the leadership of the Malang Muhammadiyah youth branch period 2021/2022",
