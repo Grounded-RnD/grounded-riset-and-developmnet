@@ -37,7 +37,7 @@ interface experienceProops extends skillsProops {
   experience: string[];
 }
 
-interface UserProops extends experienceProops {
+export interface UserProops extends experienceProops {
   fullname: string;
   slug: string;
   img: any;

@@ -24,7 +24,7 @@ export default function Project() {
               These are some of the projects that we have created and are building
             </p>
             <div data-aos="fade-up" data-aos-delay="1000" data-aos-duration="500" className="">
-              <LinkButton href="#" variant="primary" className="w-fit px-10 mx-auto md:mx-0">
+              <LinkButton href="/OurProjects" variant="primary" className="w-fit px-10 mx-auto md:mx-0">
                 Show All
               </LinkButton>
             </div>

@@ -1,8 +1,12 @@
+"use strict";
 import fahrell from "@/public/profile/fahrell.png";
 import ryo from "@/public/profile/ryo.png";
 import viki from "@/public/profile/viki.png";
 import naufal from "@/public/profile/naufal.png";
 import haza from "@/public/profile/haza.png";
+import { StaticImageData } from "next/image";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import { UserProops } from "@/services/UserProops";
 
 export const dataUser: UserProops[] = [
   {
@@ -249,5 +253,86 @@ export const dataUser: UserProops[] = [
       "3D House Designer for Various Housing Project",
       "Featured in the School Magazine",
     ],
+  },
+];
+
+interface typeOfProject {
+  type: "Bussiness" | "Website" | "Blockchain" | "Branding" | "Development" | "Mobile" | "IoT";
+}
+
+export interface projectProops {
+  imgUrl?: string | StaticImport;
+  title: string;
+  desc?: string;
+  link?: string;
+  type: string[];
+}
+
+export const projects: projectProops[] = [
+  {
+    imgUrl: "/project/SmartAca.png",
+    title: "SmartAca",
+    desc: "Better and More Economical Food Production",
+    type: ["Bussiness", "IoT"],
+    link: "/comingSoon",
+  },
+  {
+    imgUrl: "/project/agrosky.png",
+    title: "AgroSky",
+    desc: "Plantation Smart System For Amplify Harvest Gains",
+    type: ["IoT"],
+    link: "/comingSoon",
+  },
+
+  {
+    imgUrl: "/project/NexBook.png",
+    title: "NexBook",
+    desc: "First exploration of blockchain technology",
+    type: ["Blockchain", "Website"],
+    link: "/comingSoon",
+  },
+  {
+    title: "Branding on Instagram",
+    type: ["Branding"],
+    link: "https://www.instagram.com/grounded.rnd/",
+  },
+  {
+    imgUrl: "/project/SmartCounselling.png",
+    title: "SmartCounselling",
+    type: ["Website"],
+    link: "https://smart-counseling.vercel.app",
+  },
+  {
+    title: "Velockwork",
+    desc: "Example Freelance Project About Questionnaire",
+    type: ["Website"],
+    link: "",
+  },
+  {
+    imgUrl: "/project/NexaLab.png",
+    title: "NexaLab",
+    desc: "The Lab of The Future",
+    type: ["IoT", "Mobile"],
+    link: "/comingSoon",
+  },
+  {
+    imgUrl: "/project/grounded-portfolio.png",
+    title: "First Portfolio of Grounded",
+    type: ["Website"],
+    link: "/",
+  },
+  {
+    imgUrl: "/project/TelkomSociety.png",
+    title: "Telkom Society",
+    desc: "Project for SMK Telkom Malang",
+    type: ["Website"],
+    link: "https://telkom-society.vercel.app/",
+  },
+  {
+    imgUrl: "/project/JamScare.png",
+    title: "Jamscare",
+    desc: "IoT smartwatch to monitor user's heart rate",
+    type: ["IoT"],
+    link: "/comingSoon",
   },
 ];

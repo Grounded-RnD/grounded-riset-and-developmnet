@@ -2,11 +2,13 @@ import type { Metadata, Viewport } from "next";
 import { Open_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+
 import InitialAOS from "@/services/InitialAOS";
 import ProgressBarProvider from "./utilities/ProgressBarProvider";
 import Wrapper from "@/services/Wrapper";
+import toast, { Toaster } from "react-hot-toast";
+
+import AuthProvider from "@/services/AuthProvider";
 
 const open_Sans = Open_Sans({ subsets: ["latin"] });
 
@@ -41,17 +43,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <Wrapper>
-        <InitialAOS>
-          <body className={`${open_Sans.className} ${Glancyr.variable}`}>
-            <ProgressBarProvider>
-              <Navbar />
-              {children}
-              <Footer />
-            </ProgressBarProvider>
-          </body>
-        </InitialAOS>
-      </Wrapper>
+      <AuthProvider>
+        <Wrapper>
+          <InitialAOS>
+            <body className={`${open_Sans.className} ${Glancyr.variable}`}>
+              <ProgressBarProvider>{children}</ProgressBarProvider>
+            </body>
+          </InitialAOS>
+        </Wrapper>
+        <Toaster />
+      </AuthProvider>
     </html>
   );
 }

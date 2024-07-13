@@ -6,13 +6,11 @@ import InstagramIcon from "@/./public/icons/instagram-color.svg";
 import LinkedInIcon from "@/./public/icons/linkedin-color.svg";
 import GithubIcon from "@/./public/icons/github-color.svg";
 import Image from "next/image";
-import SkillWebFront from "@/./public/skill/web-frontend.svg";
-import SkillMobile from "@/./public/skill/android.svg";
-import SkillDataScience from "@/./public/skill/data-science.svg";
-import { getData } from "@/services/FetchDataUser";
+
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import ModalProfile from "@/app/components/utils/ModalProfile";
+import { UserProops } from "@/services/UserProops";
 
 const ProfilePage = () => {
   const pathname = usePathname();
