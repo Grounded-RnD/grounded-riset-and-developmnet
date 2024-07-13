@@ -1,12 +1,9 @@
 "use server";
 
 import { nextGetServerSession } from "@/services/AuthOptions";
-import { CreateUserAuth, CreateUsers, deleteUser, findUser, updateUser } from "./User.query";
+import { deleteUser } from "./User.query";
 import { revalidatePath } from "next/cache";
-import { Role, SocialLink } from "@prisma/client";
-import { hash } from "bcrypt";
 import prisma from "../prisma";
-import { getServerSession } from "next-auth";
 
 export const deleteUserById = async (id: string) => {
   try {
