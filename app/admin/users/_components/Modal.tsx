@@ -373,7 +373,7 @@ export default function Modal({ setOpenModal, data }: Proops) {
                   <label htmlFor="skills" className="block mb-2 text-sm font-medium text-white">
                     Skills
                   </label>
-                  {skills.map((skill, skillIndex) => (
+                  {skills.map((skill: any, skillIndex: any) => (
                     <div key={skillIndex} className="mb-10">
                       <div className="flex items-center">
                         <input
@@ -389,7 +389,7 @@ export default function Modal({ setOpenModal, data }: Proops) {
                           Remove Skill
                         </button>
                       </div>
-                      {skill.tech_stack.map((tech, stackIndex) => (
+                      {skill.tech_stack.map((tech: any, stackIndex: any) => (
                         <div key={stackIndex} className="flex items-center mb-2">
                           <input
                             type="text"
@@ -419,7 +419,7 @@ export default function Modal({ setOpenModal, data }: Proops) {
                   <label htmlFor="experience" className="block mb-2 text-sm font-medium text-white">
                     Experience
                   </label>
-                  {experience.map((exp, index) => (
+                  {experience.map((exp: any, index: any) => (
                     <div key={index} className="flex items-center mb-2">
                       <input
                         type="text"
