@@ -18,7 +18,7 @@ export default function Modal({ setOpenModal, data }: Proops) {
   };
 
   const removeSkill = (index: number) => {
-    setSkills(skills.filter((_, i) => i !== index));
+    setSkills(skills.filter((_: any, i: any) => i !== index));
   };
 
   const handleSkillChange = (index: number, key: string, value: string) => {
@@ -50,7 +50,7 @@ export default function Modal({ setOpenModal, data }: Proops) {
   };
 
   const removeExperience = (index: number) => {
-    setExperience(experience.filter((_, i) => i !== index));
+    setExperience(experience.filter((_: any, i: any) => i !== index));
   };
 
   const handleExperienceChange = (index: number, value: string) => {
