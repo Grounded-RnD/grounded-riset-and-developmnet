@@ -951,6 +951,10 @@ export namespace Prisma {
       maxWait?: number
       timeout?: number
     }
+    /**
+     * Instance of a Driver Adapter, e.g., like one provided by `@prisma/adapter-planetscale`
+     */
+    adapter?: runtime.DriverAdapter | null
   }
 
 

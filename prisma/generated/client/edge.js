@@ -156,7 +156,9 @@ const config = {
         "native": true
       }
     ],
-    "previewFeatures": [],
+    "previewFeatures": [
+      "driverAdapters"
+    ],
     "sourceFilePath": "C:\\Users\\SMK TELKOM 003\\OneDrive\\Documents\\Grounded Workspace\\grounded-riset-and-developmnet\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
@@ -179,8 +181,8 @@ const config = {
       }
     }
   },
-  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"./generated/client\"\n}\n\ndatasource db {\n  provider = \"mongodb\"\n  url      = env(\"DATABASE_URL\")\n}\n\nenum Role {\n  Users\n  Member\n  CoFounder\n}\n\ntype SocialLink {\n  title String\n  href  String\n}\n\ntype skillType {\n  skill      String\n  tech_stack String[]\n}\n\nmodel User {\n  id           String      @id @default(auto()) @map(\"_id\") @db.ObjectId\n  email        String      @unique\n  fullname     String\n  userAuth     UserAuth?\n  slug         String?\n  phone        String?\n  user_img     String?\n  addrress     String?\n  member_since String?\n  jabatan      String?\n  bidang       String?\n  role         Role        @default(Users)\n  web          SocialLink?\n  linkedin     SocialLink?\n  instagram    SocialLink?\n  github       SocialLink?\n  whatsapp     SocialLink?\n  skills       skillType[]\n  experience   String[]\n  created_at   DateTime    @default(now())\n}\n\nmodel UserAuth {\n  id         String    @id @default(auto()) @map(\"_id\") @db.ObjectId\n  userEmail  String    @unique\n  password   String?\n  last_login DateTime?\n  user       User      @relation(references: [email], fields: [userEmail], onDelete: Cascade)\n}\n\nmodel Projects {\n  id     String   @id @default(auto()) @map(\"_id\") @db.ObjectId\n  imgUrl String?\n  title  String\n  desc   String?\n  link   String?\n  type   String[]\n}\n",
-  "inlineSchemaHash": "81a0a8165dbfd90eae4ad65ed61df8bb500fb0bfa300811080adbfb0787b0174",
+  "inlineSchema": "generator client {\n  provider        = \"prisma-client-js\"\n  output          = \"./generated/client\"\n  previewFeatures = [\"driverAdapters\"]\n}\n\ndatasource db {\n  provider = \"mongodb\"\n  url      = env(\"DATABASE_URL\")\n}\n\nenum Role {\n  Users\n  Member\n  CoFounder\n}\n\ntype SocialLink {\n  title String\n  href  String\n}\n\ntype skillType {\n  skill      String\n  tech_stack String[]\n}\n\nmodel User {\n  id           String      @id @default(auto()) @map(\"_id\") @db.ObjectId\n  email        String      @unique\n  fullname     String\n  userAuth     UserAuth?\n  slug         String?\n  phone        String?\n  user_img     String?\n  addrress     String?\n  member_since String?\n  jabatan      String?\n  bidang       String?\n  role         Role        @default(Users)\n  web          SocialLink?\n  linkedin     SocialLink?\n  instagram    SocialLink?\n  github       SocialLink?\n  whatsapp     SocialLink?\n  skills       skillType[]\n  experience   String[]\n  created_at   DateTime    @default(now())\n}\n\nmodel UserAuth {\n  id         String    @id @default(auto()) @map(\"_id\") @db.ObjectId\n  userEmail  String    @unique\n  password   String?\n  last_login DateTime?\n  user       User      @relation(references: [email], fields: [userEmail], onDelete: Cascade)\n}\n\nmodel Projects {\n  id     String   @id @default(auto()) @map(\"_id\") @db.ObjectId\n  imgUrl String?\n  title  String\n  desc   String?\n  link   String?\n  type   String[]\n}\n",
+  "inlineSchemaHash": "c40e7cffc75c97d607d90158c9d83a29f4e151b0800c75664abec0f04dcb45ef",
   "copyEngine": true
 }
 config.dirname = '/'
