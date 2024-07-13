@@ -34,7 +34,7 @@ export const updateUserWithId = async (id: string | null, data: FormData) => {
     const user_img = data.get("user_img") as string;
     const email = data.get("email") as string;
     const fullname = data.get("fullname") as string;
-    const role = data.get("role") as Role;
+    const role = data.get("role") as any;
     const phone = data.get("phone") as string;
     const addrress = data.get("addrress") as string;
     const member_since = data.get("member_since") as string;

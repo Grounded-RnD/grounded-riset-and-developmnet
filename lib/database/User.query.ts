@@ -5,41 +5,39 @@ export const findUserAuth = async (email: string) => {
   return await prisma.userAuth.findUnique({ where: { userEmail: email } });
 };
 
-export const CreateUsers = async (data: Prisma.UserUncheckedCreateInput) => {
+export const CreateUsers = async (data: any) => {
   return await prisma.user.create({
     data,
   });
 };
-export const CreateUserAuth = async (data: Prisma.UserAuthCreateInput | Prisma.UserAuthUncheckedCreateInput) => {
+export const CreateUserAuth = async (data: any) => {
   return await prisma.userAuth.create({
     data,
   });
 };
 
-export const findAllUsers = async (filter?: Prisma.UserWhereInput) => {
+export const findAllUsers = async (filter?: any) => {
   return await prisma.user.findMany({
     where: filter,
     include: { userAuth: { select: { last_login: true } } },
   });
 };
-export const findUser = async (filter: Prisma.UserWhereInput) => {
+export const findUser = async (filter: any) => {
   return await prisma.user.findFirst({
     where: filter,
     include: { userAuth: { select: { last_login: true } } },
   });
 };
-export const updateUser = async (where: Prisma.UserWhereUniqueInput, update: Prisma.UserUncheckedUpdateInput | any) => {
+export const updateUser = async (where: any, update: any) => {
   return await prisma.user.update({ where, data: update });
 };
 export const deleteUser = async (user_id: string) => {
   return await prisma.user.delete({ where: { id: user_id } });
 };
 
-export type UserWithLastlog = Prisma.UserGetPayload<{
-  include: { userAuth: { select: { last_login: true } } };
-}>;
+export type UserWithLastlog = any;
 
-export type ProjectPayLoad = Prisma.ProjectsGetPayload<{}>;
+export type ProjectPayLoad = any;
 
 export const findUserByEmail = async (email: string) => {
   return await prisma.user.findUnique({
@@ -48,7 +46,7 @@ export const findUserByEmail = async (email: string) => {
   });
 };
 
-export const findUsers = async (filter?: Prisma.UserWhereInput) => {
+export const findUsers = async (filter?: any) => {
   return await prisma.user.findMany({
     where: filter,
   });
