@@ -35,11 +35,9 @@ export const deleteUser = async (user_id: string) => {
   return await prisma.user.delete({ where: { id: user_id } });
 };
 
-export type UserWithLastlog = Prisma.UserGetPayload<{
-  include: { userAuth: { select: { last_login: true } } };
-}>;
+export type UserWithLastlog = any;
 
-export type ProjectPayLoad = Prisma.ProjectsGetPayload<{}>;
+export type ProjectPayLoad = any;
 
 export const findUserByEmail = async (email: string) => {
   return await prisma.user.findUnique({

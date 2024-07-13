@@ -39,7 +39,7 @@ export default function Action({ deleteId, updateId, data }: { deleteId: string;
           View
         </button>
         <button
-          onClick={() => toast.error("You not have permission to delete user")}
+          onClick={() => deleteUser(deleteId)}
           className="font-semibold text-[16px] text-red-500 border-2 rounded-[12px] border-red-500 px-4 py-1 hover:ring-2 hover:ring-red-200 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-300 transition-all duration-200 hover:text-surface-50 focus:ring-2 focus:bg-red-400 focus:text-surface-50 focus:ring-red-100 "
         >
           Delete
