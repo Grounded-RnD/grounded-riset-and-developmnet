@@ -16,7 +16,7 @@ export default function Modal({ setOpenModal, data }: Proops) {
   };
 
   const removeProject = (index: number) => {
-    setProjectType(ProjectType.filter((_, i) => i !== index));
+    setProjectType(ProjectType.filter((_: any, i) => i !== index));
   };
 
   const handleProjectChange = (index: number, value: string) => {
