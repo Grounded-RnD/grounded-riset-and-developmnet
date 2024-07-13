@@ -1,7 +1,7 @@
 import { Prisma } from "@prisma/client";
 import prisma from "../prisma";
 
-export const CreateProject = async (data: Prisma.ProjectsUncheckedCreateInput) => {
+export const CreateProject = async (data: any) => {
   return await prisma.projects.create({
     data,
   });
