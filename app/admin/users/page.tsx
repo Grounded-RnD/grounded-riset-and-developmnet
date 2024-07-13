@@ -42,7 +42,7 @@ export default async function Users() {
             </tr>
           </thead>
           <tbody>
-            {user.map((x, i) => (
+            {user.map((x: any, i: any) => (
               <tr key={i} className="bg-surface-800">
                 <th scope="row" className="px-6 py-4 ">
                   {i + 1}
