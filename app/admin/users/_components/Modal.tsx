@@ -41,7 +41,7 @@ export default function Modal({ setOpenModal, data }: Proops) {
 
   const removeTechStack = (skillIndex: number, stackIndex: number) => {
     const newSkills = [...skills];
-    newSkills[skillIndex].tech_stack = newSkills[skillIndex].tech_stack.filter((_, i) => i !== stackIndex);
+    newSkills[skillIndex].tech_stack = newSkills[skillIndex].tech_stack.filter((_: any, i: any) => i !== stackIndex);
     setSkills(newSkills);
   };
 
