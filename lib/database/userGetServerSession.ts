@@ -4,6 +4,7 @@ import { nextGetServerSession } from "@/services/AuthOptions";
 import { deleteUser } from "./User.query";
 import { revalidatePath } from "next/cache";
 import prisma from "../prisma";
+import { PrismaClient, Role } from "@/prisma/generated/client";
 
 export const deleteUserById = async (id: string) => {
   try {
@@ -31,7 +32,7 @@ export const updateUserWithId = async (id: string | null, data: FormData) => {
     const user_img = data.get("user_img") as string;
     const email = data.get("email") as string;
     const fullname = data.get("fullname") as string;
-    const role = data.get("role") as any;
+    const role = data.get("role") as Role;
     const phone = data.get("phone") as string;
     const addrress = data.get("addrress") as string;
     const member_since = data.get("member_since") as string;
