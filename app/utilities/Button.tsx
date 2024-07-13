@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 
 interface buttonProops {
   className?: string;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "red";
   loading?: boolean;
   children?: ReactNode;
 }
@@ -38,6 +38,19 @@ export const LinkButton = ({ children, className, loading, variant, href, target
           </>
         )} */}
         {loading ? <span className="ml-2">Loading...</span> : children}
+      </Link>
+    );
+  }
+  if (variant === "red") {
+    return (
+      <Link
+        href={href}
+        target={target}
+        className={`font-semibold text-[16px] text-red-500 border-2 rounded-[12px] border-red-500 px-4 py-1 hover:ring-2 hover:ring-red-200 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-300 transition-all duration-200 hover:text-surface-50 focus:ring-2 focus:bg-red-400 focus:text-surface-50 focus:ring-red-100 
+          ${className} 
+          flex items-center w-auto`}
+      >
+        {children}
       </Link>
     );
   }

@@ -118,7 +118,6 @@ export default function Navbar() {
                 <Image style={{ transition: "all 0.8s ease-in-out" }} src={logob} className={`  ${isScrolled200 ? "-translate-x-60 opacity-0" : "opacity-100"}`} alt="Alternate Logo" />
               </div>
             </div>
-            {/* <Image style={{ transition: "all 0.8s ease-in-out" }} src={GLogo} className={`h-8 transition-all duration-500 ${isScrolled200 ? "opacity-0 absolute" : "opacity-100"}`} alt="Grounded Logo" /> */}
           </button>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <LinkButton href="/contact" variant="primary" className="hidden xl:block">

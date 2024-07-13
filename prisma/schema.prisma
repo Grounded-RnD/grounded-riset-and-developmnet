@@ -1,0 +1,64 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  Users
+  Member
+  CoFounder
+}
+
+type SocialLink {
+  title String
+  href  String
+}
+
+type skillType {
+  skill      String
+  tech_stack String[]
+}
+
+model User {
+  id           String      @id @default(auto()) @map("_id") @db.ObjectId
+  email        String      @unique
+  fullname     String
+  userAuth     UserAuth?
+  slug         String?
+  phone        String?
+  user_img     String?
+  addrress     String?
+  member_since String?
+  jabatan      String?
+  bidang       String?
+  role         Role        @default(Users)
+  web          SocialLink?
+  linkedin     SocialLink?
+  instagram    SocialLink?
+  github       SocialLink?
+  whatsapp     SocialLink?
+  skills       skillType[]
+  experience   String[]
+  created_at   DateTime    @default(now())
+}
+
+model UserAuth {
+  id         String    @id @default(auto()) @map("_id") @db.ObjectId
+  userEmail  String    @unique
+  password   String?
+  last_login DateTime?
+  user       User      @relation(references: [email], fields: [userEmail], onDelete: Cascade)
+}
+
+model Projects {
+  id     String   @id @default(auto()) @map("_id") @db.ObjectId
+  imgUrl String?
+  title  String
+  desc   String?
+  link   String?
+  type   String[]
+}
