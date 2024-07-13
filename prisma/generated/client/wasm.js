@@ -31,11 +31,11 @@ exports.Prisma = Prisma
 exports.$Enums = {}
 
 /**
- * Prisma Client JS version: 5.16.1
+ * Prisma Client JS version: 5.16.2
  * Query Engine version: 34ace0eb2704183d2c05b60b52fba5c43c13f303
  */
 Prisma.prismaVersion = {
-  client: "5.16.1",
+  client: "5.16.2",
   engine: "34ace0eb2704183d2c05b60b52fba5c43c13f303"
 }
 
@@ -167,12 +167,13 @@ const config = {
     "schemaEnvPath": "../../../.env"
   },
   "relativePath": "../..",
-  "clientVersion": "5.16.1",
+  "clientVersion": "5.16.2",
   "engineVersion": "34ace0eb2704183d2c05b60b52fba5c43c13f303",
   "datasourceNames": [
     "db"
   ],
   "activeProvider": "mongodb",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
@@ -192,20 +193,9 @@ defineDmmfProperty(exports.Prisma, config.runtimeDataModel)
 config.engineWasm = {
   getRuntime: () => require('./query_engine_bg.js'),
   getQueryEngineWasmModule: async () => {
-    try {
-      // try loading the Wasm module from a conditionally module tag
-      const loader = (await import('#wasm-engine-loader')).default
-      const engine = (await loader).default
-      return engine
-    } catch (e) {
-      // if the conditional module tag is not found, load the Wasm module directly.
-      // This will work on Cloudflare, but not on Vercel.
-      if (e instanceof Error && e.message.includes('No such module')) {
-        const engine = (await import('./query_engine_bg.wasm')).default
-        return engine
-      }
-      throw e
-    }
+    const loader = (await import('#wasm-engine-loader')).default
+    const engine = (await loader).default
+    return engine 
   }
 }
 
