@@ -1,4 +1,4 @@
-import { CreateUsers, findUser, updateUser } from "@/lib/database/User.query";
+import { findUser, updateUser } from "@/lib/database/User.query";
 import prisma from "@/lib/prisma";
 import { compareSync } from "bcrypt";
 import { AuthOptions, getServerSession } from "next-auth";
