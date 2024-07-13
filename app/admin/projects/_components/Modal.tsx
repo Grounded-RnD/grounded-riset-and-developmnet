@@ -125,7 +125,7 @@ export default function Modal({ setOpenModal, data }: Proops) {
                   <label htmlFor="type" className="block mb-2 text-sm font-medium text-white">
                     Type
                   </label>
-                  {ProjectType.map((x, i) => (
+                  {ProjectType.map((x: any, i: any) => (
                     <div key={i} className="flex gap-x-2 my-3">
                       <input
                         type="text"
