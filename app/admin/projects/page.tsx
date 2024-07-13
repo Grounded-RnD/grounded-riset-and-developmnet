@@ -45,7 +45,7 @@ export default async function Project() {
                 </th>
                 <td className="px-6 py-4">{x.title}</td>
                 <td className="px-6 py-4 flex gap-x-2 items-center">
-                  {x.type.map((t, ind) => (
+                  {x.type.map((t: any, ind: any) => (
                     <div key={ind} className="px-2 bg-warning-300 rounded-[4px] w-fit ">
                       <p className="xl:text-[12px] lg:text-[11px] md:text-[10px] sm:text-[9px] text-[8px] text-surface-900 font-semibold">{t}</p>
                     </div>
