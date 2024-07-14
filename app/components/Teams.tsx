@@ -124,7 +124,7 @@ export default function Teams() {
           <div data-aos="fade-left" data-aos-duration="500" data-aos-delay="1000" className="xl:w-[419px] lg:w-[260px] md:w-[180px] sm:w-[122px] w-[68px] h-[2px] bg-oranges-300"></div>
         </div>
         <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" className="mt-[100px] navigation-wrapper relative">
-          <main ref={sliderRef} className="keen-slider teams-wrapper">
+          <div ref={sliderRef} className="keen-slider teams-wrapper">
             {dataUser.map((s, i) => (
               <div
                 onClick={() => router.push(`/profile/${s.slug}`)}
@@ -154,7 +154,7 @@ export default function Teams() {
                 </div>
               </div>
             ))}
-          </main>
+          </div>
           {loaded && slider.current && (
             <>
               <Arrow left onClick={(e: any) => e.stopPropagation() || slider.current?.prev()} disabled={currentSlide === 0} />

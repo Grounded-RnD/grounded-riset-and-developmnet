@@ -10,7 +10,7 @@ export default function Project() {
   return (
     <React.Fragment>
       <section id="projects" className="h-full w-full bg-dark-100 pt-32 pb-40">
-        <main className="max-w-full px-4 lg:px-10 xl:flex justify-center lg:gap-x-20">
+        <div className="max-w-full px-4 lg:px-10 xl:flex justify-center lg:gap-x-20">
           <div className="max-w-sm mx-auto md:mx-0">
             <h2 data-aos="fade-right" data-aos-duration="500" className="font-glancyr text-surface-50 xl:text-[48px] lg:text-[44px] md:text-[40px] sm:text-[38px] text-[36px] text-center md:text-start">
               Some piece of our <span className="text-oranges-300">project</span>
@@ -125,7 +125,7 @@ export default function Project() {
               </div>
             </section>
           </div>
-        </main>
+        </div>
       </section>
     </React.Fragment>
   );

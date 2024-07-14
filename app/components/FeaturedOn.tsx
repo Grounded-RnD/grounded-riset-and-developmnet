@@ -39,7 +39,7 @@ export default function FeaturedOn() {
   return (
     <React.Fragment>
       <main className="bg-dark-200 ">
-        <section id="partner" className="flex flex-col items-center justify-center text-white py-20">
+        <div id="partner" className="flex flex-col items-center justify-center text-white py-20">
           <div className="flex justify-center items-center gap-x-10">
             <div data-aos="fade-right" data-aos-duration="500" data-aos-delay="500" className="xl:w-[356px] lg:w-[260px] md:w-[180px] sm:w-[122px] w-[68px] h-[2px] bg-oranges-300"></div>
             <div>
@@ -59,7 +59,7 @@ export default function FeaturedOn() {
               </div>
             ))}
           </div>
-        </section>
+        </div>
         <div className="px-4 md:px-10 pb-10">
           <p data-aos="fade-left" data-aos-duration="500" className="text-sm text-center md:text-right text-neutral-400 font-light italic">
             *Featured on events such as exhibitions, demo tests, implementation and competitions

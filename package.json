@@ -25,6 +25,7 @@
     "aos": "^2.3.4",
     "bcrypt": "^5.1.1",
     "cloudinary": "^2.2.0",
+    "clsx": "^2.1.1",
     "fortawesome": "^0.0.1-security",
     "keen-slider": "^6.8.6",
     "mongodb": "^6.7.0",
