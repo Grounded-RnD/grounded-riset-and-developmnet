@@ -14,7 +14,6 @@ declare module "next-auth" {
       email: string;
       slug: string;
       role: string;
-      user_img: string;
       image: string;
     };
   }
@@ -27,7 +26,6 @@ declare module "next-auth/jwt" {
     email: string;
     slug: string;
     role: string;
-    user_img: string;
     image: string;
   }
 }
@@ -103,8 +101,6 @@ export const authOptions: AuthOptions = {
       return true;
     },
     async jwt({ token, user }) {
-      console.log(token);
-
       if (user?.email) {
         const userData = await findUser({ email: user.email });
         token.id = userData?.id || "";
@@ -115,23 +111,19 @@ export const authOptions: AuthOptions = {
         token.image = userData?.user_img || "";
         token.slug = userData?.slug || "";
       }
-      console.log(token);
 
       return token;
     },
     async session({ session, token }) {
-      console.log(session);
       if (token.email && session.user) {
         session.user.role = token?.role || "Users";
         session.user.id = token.id as string;
         session.user.email = token?.email as string;
         session.user.name = token.name as string;
         session.user.slug = token.slug as string;
-        session.user.user_img = token.user_img as string;
         session.user.image = token.user_img as string;
         await updateUser({ email: token.email }, { user_img: token.user_img, userAuth: { update: { last_login: new Date() } } });
       }
-      console.log(session);
 
       return session;
     },

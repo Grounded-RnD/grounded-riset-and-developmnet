@@ -9,6 +9,7 @@ import Wrapper from "@/services/Wrapper";
 import toast, { Toaster } from "react-hot-toast";
 
 import AuthProvider from "@/services/AuthProvider";
+import clsx from "clsx";
 
 const open_Sans = Open_Sans({ subsets: ["latin"] });
 
@@ -43,16 +44,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <AuthProvider>
-        <Wrapper>
-          <InitialAOS>
-            <body className={`${open_Sans.className} ${Glancyr.variable}`}>
+      <body className={clsx(Glancyr.variable)}>
+        <AuthProvider>
+          <Wrapper>
+            <InitialAOS>
               <ProgressBarProvider>{children}</ProgressBarProvider>
-            </body>
-          </InitialAOS>
-        </Wrapper>
-        <Toaster />
-      </AuthProvider>
+            </InitialAOS>
+          </Wrapper>
+          <Toaster />
+        </AuthProvider>
+      </body>
     </html>
   );
 }
