@@ -13,6 +13,15 @@ import clsx from "clsx";
 
 const open_Sans = Open_Sans({ subsets: ["latin"] });
 
+export const metadata: Metadata = {
+  title: "Grounded | Bussiness | Riset & Development",
+  description: "Till Infinity and Beyond",
+};
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 const Glancyr = localFont({
   src: [
     {
@@ -28,15 +37,6 @@ const Glancyr = localFont({
   ],
   variable: "--font-glancyr",
 });
-
-export const metadata: Metadata = {
-  title: "Grounded | Bussiness | Riset & Development",
-  description: "Till Infinity and Beyond",
-};
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-};
 export default function RootLayout({
   children,
 }: Readonly<{
