@@ -54,7 +54,7 @@ export default function Navbar() {
     },
     {
       title: "Join Team",
-      href: "#join-team",
+      href: "/#join-team",
       slug: "join-team",
     },
   ];

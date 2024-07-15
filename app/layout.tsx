@@ -16,6 +16,7 @@ const open_Sans = Open_Sans({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Grounded | Bussiness | Riset & Development",
   description: "Till Infinity and Beyond",
+  keywords: ["Grounded", "Groundedlab", "Bussiness", "Freelance", "IoT Development", "Web Developemnt", "Mobile Development", "Startup"],
 };
 export const viewport: Viewport = {
   width: "device-width",
@@ -27,7 +28,7 @@ const Glancyr = localFont({
     {
       path: "../public/font/Glancyr-Regular.otf",
       weight: "400",
-      style: "regular",
+      style: "normal",
     },
     {
       path: "../public/font/Glancyr-Medium.otf",
@@ -44,7 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={clsx(Glancyr.variable)}>
+      <body className={clsx(Glancyr.variable, open_Sans.className)}>
         <AuthProvider>
           <Wrapper>
             <InitialAOS>
