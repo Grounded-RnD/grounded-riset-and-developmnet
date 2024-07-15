@@ -41,6 +41,7 @@ html {
 body {
   color: rgb(var(--foreground-rgb));
   background: #161616;
+  font-family: var(--font-glancyr), sans-serif;
 }
 *,
 *::before,
